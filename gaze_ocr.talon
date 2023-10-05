@@ -5,24 +5,24 @@ mode: command
 mode: user.dictation_command
 -
 (eye | i) (hover | [cursor] move): user.move_cursor_to_gaze_point()
-(eye | i) [left] (touch | click):
-    user.move_cursor_to_gaze_point()
-    mouse_click(0)
-(eye | i) [left] double (touch | click):
-    user.move_cursor_to_gaze_point()
-    mouse_click(0)
-    mouse_click(0)
-(eye | i) right (touch | click):
-    user.move_cursor_to_gaze_point()
-    mouse_click(1)
-(eye | i) middle (touch | click):
-    user.move_cursor_to_gaze_point()
-    mouse_click(2)
-(eye | i) <user.modifiers> (touch | click):
-    user.move_cursor_to_gaze_point()
-    key("{modifiers}:down")
-    mouse_click(0)
-    key("{modifiers}:up")
+# (eye | i) [left] (touch | click):
+#     user.move_cursor_to_gaze_point()
+#     mouse_click(0)
+# (eye | i) [left] double (touch | click):
+#     user.move_cursor_to_gaze_point()
+#     mouse_click(0)
+#     mouse_click(0)
+# (eye | i) right (touch | click):
+#     user.move_cursor_to_gaze_point()
+#     mouse_click(1)
+# (eye | i) middle (touch | click):
+#     user.move_cursor_to_gaze_point()
+#     mouse_click(2)
+# (eye | i) <user.modifiers> (touch | click):
+#     user.move_cursor_to_gaze_point()
+#     key("{modifiers}:down")
+#     mouse_click(0)
+#     key("{modifiers}:up")
 
 (eye | i) scroll up:
     user.move_cursor_to_gaze_point(0, 40)
