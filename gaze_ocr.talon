@@ -26,13 +26,13 @@ mode: user.dictation_command
 
 (eye | i) scroll up:
     user.move_cursor_to_gaze_point(0, 40)
-    user.mouse_scroll_up()
+    user.mouse_scroll_up(2)
 (eye | i) scroll up half:
     user.move_cursor_to_gaze_point(0, 40)
     user.mouse_scroll_up(0.5)
 (eye | i) scroll down:
     user.move_cursor_to_gaze_point(0, -40)
-    user.mouse_scroll_down()
+    user.mouse_scroll_down(2)
 (eye | i) scroll down half:
     user.move_cursor_to_gaze_point(0, -40)
     user.mouse_scroll_down(0.5)
