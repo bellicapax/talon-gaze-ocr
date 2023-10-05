@@ -4,7 +4,7 @@ mode: command
 # dictation mode. The following line will have no effect if dictation_command is not defined.
 mode: user.dictation_command
 -
-(eye | i) (hover | [cursor] move): user.move_cursor_to_gaze_point()
+^hover: user.move_cursor_to_gaze_point()
 # (eye | i) [left] (touch | click):
 #     user.move_cursor_to_gaze_point()
 #     mouse_click(0)
@@ -52,9 +52,9 @@ mode: user.dictation_command
 ocr show [text]: user.show_ocr_overlay("text", 1)
 ocr show boxes: user.show_ocr_overlay("boxes", 1)
 (hover (seen | scene) | cursor move) <user.timestamped_prose>$: user.move_cursor_to_word(timestamped_prose)
-[left] (touch | click) <user.timestamped_prose>$:
+^click <user.timestamped_prose>$:
     user.click_text(timestamped_prose)
-[left] double (touch | click) <user.timestamped_prose>$:
+^duke <user.timestamped_prose>$:
     user.double_click_text(timestamped_prose)
 right (touch | click) <user.timestamped_prose>$:
     user.right_click_text(timestamped_prose)
