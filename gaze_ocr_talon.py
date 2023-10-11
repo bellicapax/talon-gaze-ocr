@@ -612,13 +612,13 @@ class GazeOcrActions:
 
         begin_generator(run())
 
-    def double_click_text(text: TimestampedText):
-        """Double-lick on the provided on-screen text."""
+    def multi_click_text(text: TimestampedText, num_clicks: int):
+        """multi-click on the provided on-screen text."""
 
         def run():
             yield from move_cursor_to_word_generator(text)
-            actions.mouse_click(0)
-            actions.mouse_click(0)
+            for _ in range(num_clicks):
+                actions.mouse_click(0)
 
         begin_generator(run())
 

@@ -55,7 +55,9 @@ ocr show boxes: user.show_ocr_overlay("boxes", 1)
 ^click <user.timestamped_prose>$:
     user.click_text(timestamped_prose)
 ^duke <user.timestamped_prose>$:
-    user.double_click_text(timestamped_prose)
+    user.multi_click_text(timestamped_prose, 2)
+^duchess <user.timestamped_prose>$:
+    user.multi_click_text(timestamped_prose, 3)
 right (touch | click) <user.timestamped_prose>$:
     user.right_click_text(timestamped_prose)
 middle (touch | click) <user.timestamped_prose>$:
